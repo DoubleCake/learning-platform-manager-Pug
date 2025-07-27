@@ -3,7 +3,7 @@
   "name": "学习平台管理器",
   "version": "1.0",
   "description": "自动学习平台管理工具",
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [
     "*://*.scxfks.com/*",
     "*://*.xuexi.cn/*",
@@ -25,7 +25,13 @@
         "*://*.icourse163.org/*"
       ],
       "js": ["content-scripts/content.js"],
-      "css": ["content-scripts/content.css"]
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["sounds/*"],
+      "matches": ["<all_urls>"]
     }
   ],
   "icons": {
