@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习平台管理器 - Edge 插件</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <div class="edge-logo">
+                <div class="edge-icon">E</div>
+                <div class="logo">📚</div>
+            </div>
+            <h1 class="title">学习平台管理器</h1>
+            <p class="subtitle">管理您的学习进度与平台任务</p>
+        </div>
+        
+        <div class="platform-summary">
+            <div class="summary-title">
+                <h2>学习概览</h2>
+                <span class="last-update">上次更新: <span id="last-update-time">刚刚</span></span>
+            </div>
+            <div class="summary-stats">
+                <div class="stat-item completed">
+                    <div class="stat-value" id="completed-count">0</div>
+                    <div class="stat-label">已完成</div>
+                </div>
+                <div class="stat-item in-progress">
+                    <div class="stat-value" id="in-progress-count">0</div>
+                    <div class="stat-label">进行中</div>
+                </div>
+                <div class="stat-item not-started">
+                    <div class="stat-value" id="not-started-count">0</div>
+                    <div class="stat-label">未开始</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="platform-list" id="platform-list">
+            <!-- 平台列表将由JavaScript动态生成 -->
+        </div>
+        
+        <div class="actions-section">
+            <div class="action-btn" id="refresh-btn">
+                <div class="action-icon">🔄</div>
+                <div class="action-title">刷新数据</div>
+            </div>
+            <div class="action-btn" id="export-btn">
+                <div class="action-icon">💾</div>
+                <div class="action-title">导出数据</div>
+            </div>
+            <div class="action-btn" id="check-btn">
+                <div class="action-icon">✅</div>
+                <div class="action-title">检查完成状态</div>
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <div class="settings-title">
+                <div class="settings-icon">⚙️</div>
+                <h2>功能设置</h2>
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-label">启用页面提示</div>
+                <label class="switch">
+                    <input type="checkbox" id="notifications-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-label">启用自动跳转</div>
+                <label class="switch">
+                    <input type="checkbox" id="auto-redirect-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-label">启用完成检测</div>
+                <label class="switch">
+                    <input type="checkbox" id="completion-check-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>学习平台管理器 v1.4 &copy; 2023</p>
+            <p>数据仅保存在本地浏览器</p>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">这是一条通知</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
