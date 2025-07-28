@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习平台管理器 - 设置</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1>学习平台管理器设置</h1>
+            <p>自定义插件行为，管理学习平台，配置自动跳转参数</p>
+        </div>
+        
+        <div class="settings-content">
+            <!-- 自动跳转设置 -->
+            <div class="settings-section">
+                <div class="section-title">
+                    <div class="section-icon">⏱️</div>
+                    <h2>自动跳转设置</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="redirect-time">通用跳转等待时间（秒）</label>
+                    <input type="number" id="redirect-time" min="1" max="60" value="5">
+                    <p class="hint">设置检测到学习完成后的通用跳转等待时间</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="course-redirect-time">课程跳转等待时间（秒）</label>
+                    <input type="number" id="course-redirect-time" min="1" max="60" value="3">
+                    <p class="hint">设置从课程列表跳转到课程或章节的等待时间</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chapter-redirect-time">章节跳转等待时间（秒）</label>
+                    <input type="number" id="chapter-redirect-time" min="1" max="60" value="5">
+                    <p class="hint">设置从当前章节跳转到下一章节的等待时间</p>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-label">启用自动跳转功能</div>
+                    <label class="switch">
+                        <input type="checkbox" id="auto-redirect-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-label">启用跳转倒计时提示</div>
+                    <label class="switch">
+                        <input type="checkbox" id="countdown-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-label">学习完成时播放提示音</div>
+                    <label class="switch">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- 网络平台管理 -->
+            <div class="settings-section">
+                <div class="section-title">
+                    <div class="section-icon">🌐</div>
+                    <h2>网络平台管理</h2>
+                </div>
+                
+                <div class="platform-list" id="platforms-container">
+                    <!-- 平台卡片将通过JS动态生成 -->
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" id="add-platform-btn">
+                        <span>+</span> 添加新平台
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 计时器演示 -->
+            <div class="settings-section">
+                <div class="section-title">
+                    <div class="section-icon">⏳</div>
+                    <h2>跳转计时器演示</h2>
+                </div>
+                
+                <div class="countdown-section">
+                    <div class="countdown-header">
+                        <div>
+                            <h3>自动跳转倒计时</h3>
+                            <p>实际使用中将在学习平台页面显示</p>
+                        </div>
+                    </div>
+                    
+                    <div class="countdown-display-container">
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="countdown-minutes">00</div>
+                            <div class="countdown-label">分钟</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="countdown-seconds">05</div>
+                            <div class="countdown-label">秒</div>
+                        </div>
+                    </div>
+                    
+                    <div class="countdown-bar">
+                        <div class="countdown-progress" id="countdown-progress"></div>
+                    </div>
+                    
+                    <div class="countdown-controls">
+                        <button class="btn btn-primary" id="start-countdown">启动计时器</button>
+                        <button class="btn btn-secondary" id="reset-countdown">重置</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 保存按钮 -->
+            <div class="action-buttons">
+                <button class="action-btn save-btn" id="save-settings">保存设置</button>
+                <button class="action-btn reset-btn" id="reset-settings">恢复默认</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>学习平台管理器 v1.0 &copy; 2023 | 所有设置将保存在浏览器中</p>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

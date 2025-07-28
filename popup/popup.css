@@ -1,0 +1,152 @@
+body {
+  width: 350px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: #f3f2f1;
+}
+
+.popup-container {
+  padding: 15px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  color: #0078d7;
+  font-size: 18px;
+  margin: 0;
+}
+
+.platforms-section, .current-page-section {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.platforms-section h3, .current-page-section h3 {
+  font-size: 16px;
+  color: #323130;
+  margin: 0 0 12px 0;
+}
+
+.platform-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.platform-item:last-child {
+  border-bottom: none;
+}
+
+.platform-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  width: 24px;
+  text-align: center;
+}
+
+.platform-info {
+  flex: 1;
+}
+
+.platform-name {
+  font-weight: 500;
+  color: #323130;
+  font-size: 14px;
+}
+
+.platform-domain {
+  font-size: 12px;
+  color: #605e5c;
+}
+
+.platform-link {
+  background: none;
+  border: none;
+  color: #0078d7;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.status {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.status-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: #605e5c;
+  font-size: 14px;
+}
+
+.value {
+  font-weight: 500;
+  color: #323130;
+  font-size: 14px;
+}
+
+.learning-completed {
+  color: #107c10;
+  font-weight: 600;
+}
+
+.learning-in-progress {
+  color: #0078d7;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#open-options {
+  background: #0078d7;
+  color: white;
+}
+
+#open-options:hover {
+  background: #106ebe;
+}
+
+#toggle-extension {
+  background: #f0f0f0;
+  color: #323130;
+}
+
+#toggle-extension:hover {
+  background: #e0e0e0;
+}
+
+#toggle-extension.paused {
+  background: #d83b01;
+  color: white;
+}
