@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <h2>学习平台管理器</h2>
+    </div>
+    
+    <div class="platforms-section">
+      <h3>我的学习平台</h3>
+      <div class="platforms-list" id="platforms-list">
+        <!-- 平台列表将通过JS动态生成 -->
+      </div>
+    </div>
+    
+    <div class="current-page-section">
+      <h3>当前页面状态</h3>
+      <div class="status" id="current-status">
+        <div class="status-item">
+          <span class="label">检测平台:</span>
+          <span class="value" id="current-platform">-</span>
+        </div>
+        <div class="status-item">
+          <span class="label">学习状态:</span>
+          <span class="value" id="learning-status">未检测</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button id="open-options">设置</button>
+      <button id="toggle-extension">暂停</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

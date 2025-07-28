@@ -1,0 +1,61 @@
+#learning-countdown {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  min-width: 250px;
+  border: 1px solid #edebe9;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+.countdown-container {
+  text-align: center;
+}
+
+.countdown-header {
+  font-size: 16px;
+  font-weight: 500;
+  color: #323130;
+  margin-bottom: 15px;
+}
+
+.countdown-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0078d7;
+  margin-bottom: 15px;
+}
+
+.countdown-progress {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.countdown-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0078d7, #8BC34A);
+  width: 100%;
+  transition: width 1s linear;
+}
+
+#cancel-redirect {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  color: #323130;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#cancel-redirect:hover {
+  background: #e0e0e0;
+}
